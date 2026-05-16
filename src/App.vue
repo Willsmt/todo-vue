@@ -39,6 +39,10 @@ const cadastraTarefa = () => {
   estado.tarefas.push(tarefaNova);
   estado.tarefaTemp = "";
 };
+
+const deletarTarefa = (tarefa) => {
+  estado.tarefas = estado.tarefas.filter((t) => t !== tarefa);
+};
 </script>
 
 <template>
@@ -50,6 +54,6 @@ const cadastraTarefa = () => {
       :edita-tarefa-temp="(evento) => (estado.tarefaTemp = evento.target.value)"
       :cadastra-taterefa="cadastraTarefa"
     />
-    <ListaDeTarefas :tarefas="getTarefasfiltradas()" />
+    <ListaDeTarefas :tarefas="getTarefasfiltradas()" @deletar="deletarTarefa" />
   </div>
 </template>
