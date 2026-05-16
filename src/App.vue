@@ -57,3 +57,28 @@ const deletarTarefa = (tarefa) => {
     <ListaDeTarefas :tarefas="getTarefasfiltradas()" @deletar="deletarTarefa" />
   </div>
 </template>
+
+<style scoped>
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 71, 171, 0.1),
+    /* Azul Tekhelet suave */ rgba(128, 0, 128, 0.08),
+    /* Púrpura Argaman suave */ rgba(255, 36, 0, 0.08) /* Escarlate suave */
+  );
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container h1,
+.container p {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container > * {
+  margin-bottom: 20px;
+}
+</style>
