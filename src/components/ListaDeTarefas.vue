@@ -41,7 +41,56 @@ const emit = defineEmits(["deletar"]);
 </template>
 
 <style scoped>
+/* Estilo da lista */
+.list-group {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada item */
+.list-group-item {
+  background: #fdfdfd;
+  border: none;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover */
+.list-group-item:hover {
+  background-color: #f5f5ff; /* leve azul */
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  accent-color: #0047ab; /* Azul Tekhelet */
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Texto da tarefa */
+label {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Quando finalizada */
 .done {
   text-decoration: line-through;
+  color: #800080; /* Púrpura Argaman */
+}
+
+/* Botão excluir */
+.btn-danger {
+  background-color: #c62d25; /* Escarlate */
+  border-color: #c62d25;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #ff2400; /* Escarlate vivo */
+  border-color: #ff2400;
 }
 </style>
